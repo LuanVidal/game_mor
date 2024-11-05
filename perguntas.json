@@ -1,0 +1,152 @@
+[
+  {
+    "pergunta": "Qual é o papel da gestão democrática na escola?",
+    "respostas": ["Promover a participação de todos", "Controlar rigidamente as atividades", "Evitar a cooperação", "Impor regras sem diálogo"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A gestão democrática envolve:",
+    "respostas": ["Apenas professores e alunos", "Toda a comunidade escolar", "Somente a direção", "Apenas os pais"],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual é a importância do Projeto Político-Pedagógico?",
+    "respostas": ["Definir objetivos e diretrizes da escola", "Aplicar punições aos alunos", "Impor regras sem consulta", "Promover eventos esportivos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "Quem participa da construção do Projeto Político-Pedagógico?",
+    "respostas": ["Somente pais", "Apenas alunos", "Toda a comunidade escolar", "Direção e professores"],
+    "correta": 2
+  },
+  {
+    "pergunta": "O que significa autonomia na gestão escolar?",
+    "respostas": ["Decisões centralizadas", "Participação limitada", "Independência e participação", "Foco em resultados financeiros"],
+    "correta": 2
+  },
+  {
+    "pergunta": "Um dos pilares da gestão democrática é:",
+    "respostas": ["A disciplina rígida", "A hierarquia estrita", "Centralização de decisões", "A participação coletiva"],
+    "correta": 3
+  },
+  {
+    "pergunta": "A avaliação na gestão democrática deve ser:",
+    "respostas": ["Exclusivamente quantitativa", "Participativa e formativa", "Apenas pela direção", "Focada somente nas notas"],
+    "correta": 1
+  },
+  {
+    "pergunta": "O conselho escolar é responsável por:",
+    "respostas": ["Gerir recursos financeiros", "Organizar festas escolares", "Decidir sem consultar ninguém", "Apenas punir alunos"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A gestão escolar deve considerar:",
+    "respostas": ["Apenas os interesses da direção", "Somente os resultados acadêmicos", "Os interesses de toda a comunidade escolar", "Apenas as exigências governamentais"],
+    "correta": 2
+  },
+  {
+    "pergunta": "A gestão democrática valoriza:",
+    "respostas": ["A individualidade", "A competição entre alunos", "A hierarquia rígida", "O trabalho em equipe"],
+    "correta": 3
+  },
+  {
+    "pergunta": "Uma prática democrática na escola é:",
+    "respostas": ["Centralizar decisões na direção", "Realizar assembleias com a comunidade", "Impor regras sem consulta", "Evitar a participação dos pais"],
+    "correta": 1
+  },
+  {
+    "pergunta": "O Projeto Político-Pedagógico deve ser:",
+    "respostas": ["Estático e inalterável", "Decidido somente pela direção", "Construído com a participação de todos", "Focado apenas em notas"],
+    "correta": 2
+  },
+  {
+    "pergunta": "A autonomia na escola promove:",
+    "respostas": ["Dependência da direção", "Controle centralizado", "Desinteresse dos alunos", "Iniciativa e responsabilidade"],
+    "correta": 3
+  },
+  {
+    "pergunta": "O diretor em uma gestão democrática deve:",
+    "respostas": ["Priorizar os interesses próprios", "Promover a participação de todos", "Tomar decisões sozinho", "Impor suas opiniões"],
+    "correta": 1
+  },
+  {
+    "pergunta": "A gestão democrática contribui para:",
+    "respostas": ["A competitividade extrema", "A centralização do poder", "A disciplina rígida", "A cooperação e o diálogo"],
+    "correta": 3
+  },
+  {
+    "pergunta": "Qual é o papel dos pais na gestão democrática?",
+    "respostas": ["Somente financiar a escola", "Criticar as ações da escola", "Evitar participação", "Contribuir com ideias e decisões"],
+    "correta": 3
+  },
+  {
+    "pergunta": "A gestão democrática visa:",
+    "respostas": ["Impor normas sem participação", "Promover cooperação e autonomia", "Controlar rigidamente os alunos", "Evitar mudanças"],
+    "correta": 1
+  },
+  {
+    "pergunta": "O diálogo na gestão escolar é importante para:",
+    "respostas": ["Impor regras", "Controlar a comunidade", "Evitar conflitos", "Promover a inclusão de ideias"],
+    "correta": 3
+  },
+  {
+    "pergunta": "Qual é a base do Projeto Político-Pedagógico?",
+    "respostas": ["Apenas conteúdo curricular", "Objetivos e metas educacionais", "Interesses individuais", "Regras rígidas"],
+    "correta": 1
+  },
+  {
+    "pergunta": "A gestão democrática valoriza a:",
+    "respostas": ["Competição", "Participação coletiva", "Hierarquia", "Individualidade extrema"],
+    "correta": 1
+  },
+  {
+    "pergunta": "A transparência na gestão escolar é importante para:",
+    "respostas": ["Esconder problemas", "Evitar a participação", "Controlar a comunidade", "Promover a confiança"],
+    "correta": 3
+  },
+  {
+    "pergunta": "Um dos objetivos da gestão democrática é:",
+    "respostas": ["Estimular a autonomia", "Priorizar interesses individuais", "Controlar rigidamente", "Centralizar o poder"],
+    "correta": 0
+  },
+  {
+    "pergunta": "A avaliação participativa é:",
+    "respostas": ["Focada apenas em notas", "Compartilhada e formativa", "Centralizada", "Imposta pela direção"],
+    "correta": 1
+  },
+  {
+    "pergunta": "A gestão escolar democrática promove:",
+    "respostas": ["Decisões unilaterais", "Competição extrema", "Participação e inclusão", "Hierarquia rígida"],
+    "correta": 2
+  },
+  {
+    "pergunta": "O Projeto Político-Pedagógico deve ser:",
+    "respostas": ["Focado em resultados financeiros", "Resultado de construção coletiva", "Escrito pelos alunos", "Imposto pela direção"],
+    "correta": 1
+  },
+  {
+    "pergunta": "A participação dos pais na escola é importante para:",
+    "respostas": ["Controlar os alunos", "Evitar conflitos", "Esconder problemas", "Apoiar o desenvolvimento escolar"],
+    "correta": 3
+  },
+  {
+    "pergunta": "A gestão democrática nas escolas públicas é assegurada por:",
+    "respostas": ["A iniciativa dos alunos", "Apenas a vontade da direção", "O desinteresse dos professores", "Leis e políticas públicas"],
+    "correta": 3
+  },
+  {
+    "pergunta": "A gestão democrática favorece:",
+    "respostas": ["A competitividade", "A cooperação e diálogo", "A imposição de regras", "A centralização do poder"],
+    "correta": 1
+  },
+  {
+    "pergunta": "Uma prática democrática é:",
+    "respostas": ["Evitar a participação dos pais", "Focar somente nos resultados", "Realizar reuniões coletivas", "Impor decisões"],
+    "correta": 2
+  },
+  {
+    "pergunta": "O conselho escolar deve promover:",
+    "respostas": ["A exclusão de pais", "Decisões centralizadas", "A participação de todos", "Apenas atividades recreativas"],
+    "correta": 2
+  }
+]

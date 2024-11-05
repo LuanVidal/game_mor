@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola Democrática: Desafios e Práticas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="container mt-5">
+    <div id="inicio" class="text-center">
+      <h1>Escola Democrática: Desafios e Práticas</h1>
+      <p>Teste seus conhecimentos sobre gestão escolar democrática e explore práticas que promovem a participação e a autonomia na escola!</p>
+      <input type="text" id="nome" class="form-control mt-3" placeholder="Digite seu nome">
+      <button onclick="iniciarJogo()" class="btn btn-primary mt-3">Iniciar</button>
+    </div>
+    <div id="jogo" class="d-none">
+      <div class="d-flex justify-content-between">
+        <h2 id="nomeParticipante"></h2>
+        <h3 id="timer">Tempo: 05:00</h3>
+      </div>
+      <div id="pergunta" class="mt-4"></div>
+      <div id="respostas" class="list-group mt-3"></div>
+      <button onclick="confirmarResposta()" class="btn btn-primary mt-3">Confirmar Resposta</button>
+    </div>
+    <div id="final" class="d-none text-center">
+      <h2>Resultado Final</h2>
+      <p id="pontuacaoFinal"></p>
+      <h3>Ranking dos Melhores Participantes</h3>
+      <ol id="ranking"></ol>
+      <button onclick="reiniciar()" class="btn btn-secondary mt-3">Jogar Novamente</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
