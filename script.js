@@ -23,15 +23,25 @@ async function carregarPerguntas() {
 
 // Função para iniciar o jogo
 function iniciarJogo() {
-  nomeJogador = document.getElementById("nome").value;
+  // Captura o valor do campo de nome
+  nomeJogador = document.getElementById("nome").value.trim();
+
+  // Verifica se o nome foi inserido
   if (!nomeJogador) {
     alert("Por favor, insira seu nome.");
     return;
   }
+
+  // Esconde a tela de início e exibe a tela do jogo
   document.getElementById("inicio").classList.add("d-none");
   document.getElementById("jogo").classList.remove("d-none");
-  document.getElementById("nomeParticipante").textContent = `Jogador: ${nomeJogador}`;
+
+  // Exibe o nome do jogador na tela
+
+  // Armazena o estado do jogo no localStorage
   localStorage.setItem("estado", "jogo");
+
+  // Carrega as perguntas e inicia o timer
   carregarPerguntas().then(() => {
     exibirPergunta();
     iniciarTimer();
@@ -89,7 +99,7 @@ function iniciarTimer() {
     tempoRestante--;
     const minutos = String(Math.floor(tempoRestante / 60)).padStart(2, "0");
     const segundos = String(tempoRestante % 60).padStart(2, "0");
-    document.getElementById("timer").textContent = `Tempo: ${minutos}:${segundos}`;
+    document.getElementById("timer").textContent = `${minutos}:${segundos}`;
     if (tempoRestante <= 0) {
       finalizarJogo(); // Tempo esgotado, leva para a tela de resultado
     }
@@ -124,21 +134,33 @@ async function salvarPontuacao() {
 
 // Buscar e exibir o ranking atualizado do Supabase
 async function atualizarRanking() {
+  // Busca os dados do ranking no Supabase
   const { data: rankingData, error } = await supabaseClient
     .from('ranking')
     .select('*')
     .order('pontuacao', { ascending: false })
-    .limit(10);
+    .limit(10); // Limita a consulta aos 10 primeiros
 
   if (error) {
     console.error('Erro ao buscar o ranking:', error);
     return;
   }
 
+  // Atualiza os nomes e pontuações no pódio
+  document.getElementById("primeiroLugar").innerText = `${rankingData[0]?.nome || "N/A"}: ${rankingData[0]?.pontuacao || "0"}`;
+  document.getElementById("segundoLugar").innerText = `${rankingData[1]?.nome || "N/A"}: ${rankingData[1]?.pontuacao || "0"}`;
+  document.getElementById("terceiroLugar").innerText = `${rankingData[2]?.nome || "N/A"}: ${rankingData[2]?.pontuacao || "0"}`;
+
+  // Adiciona margem entre o pódio e a lista
+  document.getElementById("ranking").style.marginTop = "20px"; 
+
+  // Atualiza a lista para os 4º ao 10º lugares
   const rankingList = document.getElementById("ranking");
   rankingList.innerHTML = rankingData
-    .map((item) => `<li>${item.nome}: ${item.pontuacao}</li>`)
+    .slice(3, 10) // Seleciona os participantes do 4º ao 10º lugar
+    .map((item, index) => `<li>${index + 4}º ${item.nome}: ${item.pontuacao}</li>`) // Adiciona a posição e a pontuação
     .join("");
+
 }
 
 // Restaurar o estado da página
@@ -160,6 +182,7 @@ function iniciarAssinaturaRanking() {
       { event: '*', schema: 'public', table: 'ranking' },
       () => {
         atualizarRanking();
+        location.reload();  // Recarrega a página automaticamente
       }
     )
     .subscribe();
@@ -182,6 +205,23 @@ function reiniciar() {
   document.getElementById("inicio").classList.remove("d-none");
   localStorage.setItem("estado", "inicio");
 }
+
+
+document.querySelectorAll('.list-group-item').forEach(item => {
+  item.addEventListener('click', function () {
+    // Remova as classes "correct" e "incorrect" de todas as alternativas
+    document.querySelectorAll('.list-group-item').forEach(option => {
+      option.classList.remove('correct', 'incorrect');
+    });
+
+    // Adiciona a classe "correct" ou "incorrect" dependendo da escolha
+    if (this.dataset.correct === "true") {
+      this.classList.add('correct');
+    } else {
+      this.classList.add('incorrect');
+    }
+  });
+});
 
 // Tornar funções acessíveis ao escopo global
 window.iniciarJogo = iniciarJogo;

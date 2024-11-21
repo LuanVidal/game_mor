@@ -1,40 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escola Democrática: Desafios e Práticas</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-  <div id="app" class="container mt-5">
-    <div id="inicio" class="text-center">
-      <h1>Escola Democrática: Desafios e Práticas</h1>
-      <p>Teste seus conhecimentos sobre gestão escolar democrática e explore práticas que promovem a participação e a autonomia na escola!</p>
-      <input type="text" id="nome" class="form-control mt-3" placeholder="Digite seu nome">
-      <button onclick="iniciarJogo()" class="btn btn-primary mt-3">Iniciar</button>
-    </div>
-    <div id="jogo" class="d-none">
-      <div class="d-flex justify-content-between">
-        <h2 id="nomeParticipante"></h2>
-        <h3 id="timer">Tempo: 05:00</h3>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Democrática: Desafios e Práticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Playpen+Sans:wght@400&family=Rowdies:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Tela Inicial -->
+      <div id="inicio" class="tela-inicial">
+        <h1 class="titulo-principal">Quiz</h1>
+        <h2 class="subtitulo">Escola Democrática: Desafios e Práticas</h2>
+        <div class="avatares">
+          <div class="avatar" style="background-image: url('/imgs/gabriel.png');"></div>
+          <div class="avatar" style="background-image: url('/imgs/mor.png');"></div>
+          <div class="avatar" style="background-image: url('/imgs/luiza.png');"></div>
+        </div>
+        <div class="avatares">
+          <div class="avatar" style="background-image: url('/imgs/lucas.png');"></div>
+          <div class="avatar" style="background-image: url('/imgs/guilherme.png');"></div>
+        </div>
+        <input type="text" id="nome" class="campo-nome" placeholder="Digite seu nome">
+        <button onclick="iniciarJogo()" class="btn-jogar">Jogar</button>
+        <footer class="footer">Namorado da Michelly ©</footer>
       </div>
-      <div id="pergunta" class="mt-4"></div>
-      <div id="respostas" class="list-group mt-3"></div>
-      <button onclick="confirmarResposta()" class="btn btn-primary mt-3">Confirmar Resposta</button>
-    </div>
-    <div id="final" class="d-none text-center">
-      <h2>Resultado Final</h2>
-      <p id="pontuacaoFinal"></p>
-      <h3>Ranking dos Melhores Participantes</h3>
-      <ol id="ranking"></ol>
-      <button onclick="reiniciar()" class="btn btn-secondary mt-3">Jogar Novamente</button>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script type="module" src="script.js"></script>
-</body>
+
+      <!-- Tela do Jogo -->
+      <div id="jogo" class="d-none">
+        <div class="d-flex justify-content-between">
+          <h3 id="timer">05:00</h3>
+        </div>
+        <div id="pergunta" class="mt-4"></div>
+        <div id="respostas" class="list-group mt-3"></div>
+        <button onclick="confirmarResposta()" class="btn btn-primary mt-3">Confirmar Resposta</button>
+      </div>
+
+      <!-- Tela Final -->
+      <div id="final" class="d-none text-center">
+        <div class="ranking-card">
+          <h2 class="titulo-final">Resultado Final</h2>
+          <p id="pontuacaoFinal" class="pontuacao"></p>
+          <h3 class="ranking-titulo">Ranking dos Melhores Participantes</h3>
+          <br>
+          <div class="ranking-container">
+            <!-- Pódio Ilustrativo -->
+            <div class="podium">
+              <div class="podium-item second-place">
+                <span>2</span>
+                <p id="segundoLugar">Segundo</p>
+              </div>
+              <div class="podium-item first-place">
+                <span>1</span>
+                <p id="primeiroLugar">Primeiro</p>
+              </div>
+              <div class="podium-item third-place">
+                <span>3</span>
+                <p id="terceiroLugar">Terceiro</p>
+              </div>
+            </div>
+            <!-- Lista de Ranking -->
+            <li  style="list-style-type: none;" id="ranking" class="ranking-list"></li>
+          </div>
+          <p id="pontuacaoJogadorAtual"></p>
+        </div>
+      </div>
+
+    <!-- Inclusão do script do Supabase e script principal -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
